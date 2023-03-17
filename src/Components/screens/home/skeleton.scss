@@ -1,0 +1,39 @@
+.skeleton__wrapper{
+    // background-color:grey;
+    // margin-top:10px;
+        width:100%;
+        height:100%;
+        .skeleton{
+            &.video{
+                width :100%;
+                height :80%;
+                margin-bottom:3%
+            }
+            &.channel{
+                width:80%;
+                height:100%;
+                margin:auto;
+                border-radius:50%;
+            }
+            &.mini_content{
+                width:100%;
+                height:100%;
+            }
+            &.video,&.mini_content,&.channel{
+                animation:shimmer 2s linear infinite;
+                background-size: 350%;
+                background-image:linear-gradient(to right,#656871 0%,#888b94 20%,#656871 40%,#656871 100%);
+            }
+            @keyframes shimmer{
+                0%{
+                   background-position:100%;
+                }
+                100%{
+                    background-position: 0%;
+                }
+            }
+
+         }
+    }
+  
+ 

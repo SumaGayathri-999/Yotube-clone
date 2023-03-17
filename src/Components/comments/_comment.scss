@@ -1,0 +1,20 @@
+.comment{
+    // font-size:clamp(1rem, 1.5vw, 3rem);
+    border-bottom:1px solid #353946;
+    img{
+        width: clamp(2.5rem, 3.5vw, 5rem);
+        height: clamp(2.5rem, 3.5vw, 5rem);
+        border-radius:50%;
+        background-color:grey;
+        object-fit:contain;
+    }
+    &__body{
+        margin-left:1.2rem;
+        span{
+        font-size:14px;
+        }
+        h1{
+
+        }
+    }
+}

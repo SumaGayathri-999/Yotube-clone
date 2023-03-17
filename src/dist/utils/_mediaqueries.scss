@@ -1,0 +1,25 @@
+
+// //saas map for 700px, 900px, 1440px ---- above
+// $breakpoint-up : (
+//   "medium" :500px,
+//   "large":700px,
+//   "xlarge":900px
+// );
+// // saas map for 699.98px, 899.98px, 1439.98px
+// $breakpoint-down : (
+//   "small" :499.98px,
+//   "medium":699.98px,
+//   "large":899.98px
+// );
+// //saas mixin 
+// @mixin upscale($size){
+//     @media(min-width : map-get($breakpoint-up,$size)){
+//         @content;
+//     }
+// }
+
+// @mixin lowscale($size){
+//     @media(max-width: map-get($breakpoint-down,$size)){
+//         @content
+//     }
+// }

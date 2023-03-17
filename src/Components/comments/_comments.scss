@@ -1,0 +1,26 @@
+.comments__form{
+.accountImage{
+    width: clamp(2.5rem, 3.5vw, 5rem);
+    height: clamp(2.5rem, 3.5vw, 5rem);
+    border-radius:50%;
+    background-color:grey;
+    object-fit:contain;
+}
+ input{
+    background-color: transparent;
+    border:none;
+    border-bottom:2px solid #353946;
+    &:focus{
+        border-bottom:2px solid #353946;
+        outline:none;
+    }
+ }
+ button{
+    all:unset;
+    border-bottom:2px solid #353946;
+    padding: 0.2rem;
+    background-color:rgb(74, 74, 250);
+    cursor:pointer;
+    
+ }
+}

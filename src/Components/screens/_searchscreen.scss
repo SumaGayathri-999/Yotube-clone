@@ -1,0 +1,16 @@
+.loading_skeleton{
+    animation:shimmer 2s linear infinite;
+    background-size: 350%;
+    background-image:linear-gradient(to right,#656871 0%,#888b94 20%,#656871 40%,#656871 100%);
+    height:150px;
+    margin-bottom:20px;
+    animation:shiner 2s linear infinite;
+ }
+ @keyframes shiner {
+    0%{
+       background-position:100%;
+    }
+    100%{
+        background-position: 0%;
+    }      
+ }

@@ -1,0 +1,53 @@
+@import "../../dist/globals/variables";
+@import "../../dist/utils/functions";
+
+
+.video{
+    margin-bottom:2rem;
+    font-weight:500;
+    font-size:0.9rem;
+    cursor:pointer;
+    &__thumb{
+        margin-bottom:0.3rem;
+        position:relative;
+        img{
+            width:100%;
+        }
+        span{
+            position:absolute;
+            bottom:0.3rem;
+            right:0.6rem;
+            background-color:black;
+            color:$highlight-textcolor;
+            padding:0.1rem 0.4rem;
+            border-radius:3%;
+        }
+    }
+    &__title{
+        color:#fff;
+        display:-webkit-box;
+        @include line-clamp(1);
+        font-size:18px;
+        @media (max-width:800px){
+            font-size:15px;
+        }
+    }
+    &__details{
+        display:flex;
+        align-items:center;
+        margin-bottom:0.5rem;
+    }
+    &__channel{
+        img{
+            width:2.5rem;
+            height:2.5rem;
+            border-radius:50%;
+            margin-right:0.4rem;
+            border:3px solid $highlight-textcolor;
+            cursor:pointer;
+        }
+
+    
+
+    }
+}

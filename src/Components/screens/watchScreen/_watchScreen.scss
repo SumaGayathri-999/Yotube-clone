@@ -1,0 +1,82 @@
+@import "../../../dist/globals/variables";
+
+.iframe_container{
+   position:relative;
+   width:100%;
+   padding-bottom: 56.25%;
+   height: 0;
+   iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%
+   }
+}
+.video_title{
+        font-size:18px;
+        font-weight:500;
+        letter-spacing:0.091rem;
+        @media (max-width:600px){
+            font-size:15px;
+        }
+}
+.channel{
+    // align-items:center;
+    font-size:clamp(0.9rem, 1vw, 2rem);
+
+    &__image{
+        width: clamp(2.5rem, 3.5vw, 5rem);
+        height: clamp(2.5rem, 3.5vw, 5rem);
+        border-radius:50%;
+        background-color:grey;
+    }
+}
+.force_left{
+   margin-left:70px;
+   @media (max-width:$breakpoint-small){
+    margin-left:0px;
+
+   }
+}
+.sub_btn{
+    background-color:red;
+    color:white;
+    letter-spacing:0.1rem;
+    text-transform:uppercase;
+    font-weight:600px;
+    padding:0.3rem;
+    border-radius:0.2rem;
+    border:none;
+}
+.stats{
+    margin-top:2rem;
+    &__likes,&__share,&__save,&__download,&__views{
+        background-color:rgba(255, 255, 255,0.8);
+        padding:0.3rem;
+        border-radius:20%;
+        cursor:pointer; 
+    } 
+}
+.description{
+    // background-color:red;
+    margin-top:0.8rem;
+    font-size:clamp(0.9rem, 1vw, 2rem);
+
+}
+.loading_skeleton{
+    animation:shimmer 2s linear infinite;
+    background-size: 350%;
+    background-image:linear-gradient(to right,#656871 0%,#888b94 20%,#656871 40%,#656871 100%);
+    height:150px;
+    margin-bottom:20px;
+    animation:shiner 2s linear infinite;
+ }
+ @keyframes shiner {
+    0%{
+       background-position:100%;
+    }
+    100%{
+        background-position: 0%;
+    }      
+ }
