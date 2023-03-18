@@ -25,7 +25,12 @@
                 background-image:linear-gradient(to right,#656871 0%,#888b94 20%,#656871 40%,#656871 100%);
             }
             @keyframes shimmer{
-
+                0%{
+                    background-position:100%;
+                 }
+                 100%{
+                     background-position: 0%;
+                 }      
             }
 
          }
