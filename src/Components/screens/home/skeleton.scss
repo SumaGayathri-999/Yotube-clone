@@ -10,8 +10,8 @@
                 margin-bottom:3%
             }
             &.channel{
-                width:80%;
-                height:100%;
+                width:35px;
+                height:35px;
                 margin:auto;
                 border-radius:50%;
             }
@@ -25,12 +25,7 @@
                 background-image:linear-gradient(to right,#656871 0%,#888b94 20%,#656871 40%,#656871 100%);
             }
             @keyframes shimmer{
-                0%{
-                   background-position:100%;
-                }
-                100%{
-                    background-position: 0%;
-                }
+
             }
 
          }

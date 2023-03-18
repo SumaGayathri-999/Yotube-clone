@@ -47,7 +47,7 @@ function HomeScreen() {
     <HelmetCustom />
      <Container fluid >
        <Categories />
-        <Row className ="left_elements mt-4">
+        {/* <Row className ="left_elements mt-4">
          {videos && videos.map((video)=>{
           return (
             <>
@@ -58,9 +58,9 @@ function HomeScreen() {
           )
          })
          } 
-         </Row>
+         </Row> */}
            <div className ="row left_elements mt-4"  ref ={loadRef} style = {{padding:"0px"}}>
-            {loading && [...Array(12)].map((item)=>{
+            {!loading && [...Array(12)].map((item)=>{
                 return(
                   <>
                   <Col lg={3} md={4} style={{margin:0,padding:"20px",height:"200px"}}>

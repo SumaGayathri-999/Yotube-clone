@@ -13,7 +13,9 @@ jobs:
     steps:
       - name: Get the source code
         uses: actions/checkout@v3
-        
+      - name: Set up Env variables
+        run: |
+          echo "API_KEY=${{secrets.API_KEY}}" >> $GITHUB_ENV
       - name: Install node
         uses: actions/setup-node@v3
         with:
@@ -26,6 +28,7 @@ jobs:
         run: npm run build
         env:
           CI: false
+          
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
