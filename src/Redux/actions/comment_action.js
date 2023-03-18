@@ -1,5 +1,6 @@
 import {COMMENT_LIST_REQUEST,COMMENT_LIST_SUCCESS,COMMENT_LIST_FAILURE,ADD_COMMENT_SUCCESS,ADD_COMMENT_FAILURE} from '../action_types';
 import request from "../../api";
+import {baseParams} from '../../api';
 
 
 export const getComments = (videoId) => {
@@ -8,6 +9,7 @@ export const getComments = (videoId) => {
         try{
             const {data} = await request('/commentThreads',{
                 params :{
+                    ...baseParams,
                     part:"snippet",
                     videoId:videoId,
                 },
@@ -44,6 +46,7 @@ export const addComments = (videoId,text) => {
         try{
              await request.post('/commentThreads',body_obj,{
                 params :{
+                    ...baseParams,
                     part:"snippet",
                 },
                 headers:{

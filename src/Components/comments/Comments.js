@@ -29,7 +29,7 @@ function Comments({commentCount,videoId}) {
 
   return (
     <>
-       <p className ="mt-2">{numeral(commentCount).format("0.a")} comments</p>
+       <p  style = {{fontWeight:"600",marginTop:"0.8rem"}}>{numeral(commentCount).format("0.a")} comments</p>
        <div className ="comments__form d-flex w-100">
            <img className="accountImage" src={user?.photourl} alt="" />
            <form onSubmit ={(e)=>{handleSubmit(e)}} className ="d-flex flex-grow-1 ml-2" style ={{marginLeft:"1rem"}}>

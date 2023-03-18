@@ -14,7 +14,9 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Subscribe from './Subscribe'
 import request from '../../../api';
+import {baseParams} from '../../../api';
 import HelmetCustom from '../../HelmetCustom';
+
 
 function Watchscreen() {
    const {id} = useParams();
@@ -30,6 +32,7 @@ function Watchscreen() {
       (async ()=>{
         const {data} = await request('/search',{
           params:{
+            ...baseParams,
             part:"snippet",
             relatedToVideoId:id,
             maxResults: 15,
@@ -47,7 +50,7 @@ function Watchscreen() {
         <HelmetCustom title ={title} description = {description}/>
         <Col lg={8}>
          <div className="iframe_container" style = {{backgroundColor:"grey"}}>
-         <iframe title = "video" src={`http://www.youtube.com/embed/${id}?autoplay=1`} type="video/youtube" width="100%" height="100%" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+         <iframe title = "video" src={`http://www.youtube.com/embed/${id}?autoplay=1`} type="video/youtube" width="100%" height="100%" frameBorder="0" allowFullScreen allow="autoplay"></iframe>
          </div>
         <div className ="video_title my-3 text-light" >
          {title}

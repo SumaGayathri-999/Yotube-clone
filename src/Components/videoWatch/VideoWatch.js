@@ -6,6 +6,7 @@ import moment from 'moment';
 import numeral from 'numeral';
 import './_videoWatch.scss';
 import request from '../../api';
+import {baseParams} from '../../api';
 import {useNavigate} from 'react-router-dom';
 
 
@@ -24,6 +25,7 @@ function VideoWatch({video,searchScreen}) {
       const get_videos_details = async()=>{
       const {data:{items}} = await request("/videos",{
         params:{
+          ...baseParams,
           part:"snippet,contentDetails,statistics",
           id:video_id,
         }
@@ -38,6 +40,7 @@ function VideoWatch({video,searchScreen}) {
       const get_channel_icon = async()=>{
       const {data:{items}} = await request("/channels",{
         params:{
+         ...baseParams,
           part:"snippet,statistics",
           id:channelId,
         }
