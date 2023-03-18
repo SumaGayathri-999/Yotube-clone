@@ -1,7 +1,6 @@
 import {COMMENT_LIST_REQUEST,COMMENT_LIST_SUCCESS,COMMENT_LIST_FAILURE,ADD_COMMENT_SUCCESS,ADD_COMMENT_FAILURE} from '../action_types';
 import request from "../../api";
-import {baseParams} from '../../api';
-
+import { baseParams } from '../../api';
 
 export const getComments = (videoId) => {
     return async (dispatch)=>{

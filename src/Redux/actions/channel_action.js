@@ -1,5 +1,5 @@
 import request from '../../api';
-import {baseParams} from '../../api';
+import { baseParams } from '../../api';
 import {SET_SUBSCRIPTION_STATUS} from '../action_types';
 
 export const chananelSubscriptionStatus = (id)=>{
