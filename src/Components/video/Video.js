@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { AiFillEye } from 'react-icons/ai'
 import "./_video.scss";
 import request from '../../api';
+import {baseParams} from '../../api';
 import moment from 'moment';
 import numeral from 'numeral';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -29,6 +30,7 @@ function Video({video}) {
     const get_videos_details = async()=>{
     const {data:{items}} = await request("/videos",{
       params:{
+        ...baseParams,
         part:"snippet,contentDetails,statistics",
         id:video_id,
       }
@@ -42,6 +44,7 @@ function Video({video}) {
     const get_channel_icon = async()=>{
     const {data:{items}} = await request("/channels",{
       params:{
+        ...baseParams,
         part:"snippet,statistics",
         id:channelId,
       }

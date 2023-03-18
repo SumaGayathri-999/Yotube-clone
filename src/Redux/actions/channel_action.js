@@ -1,4 +1,5 @@
 import request from '../../api';
+import {baseParams} from '../../api';
 import {SET_SUBSCRIPTION_STATUS} from '../action_types';
 
 export const chananelSubscriptionStatus = (id)=>{
@@ -6,6 +7,7 @@ export const chananelSubscriptionStatus = (id)=>{
         try {
             const { data } = await request('/subscriptions', {
                params: {
+                  ...baseParams,
                   part: 'snippet',
                   forChannelId: id,
                   mine: true,

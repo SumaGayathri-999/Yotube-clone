@@ -1,11 +1,14 @@
 import request from "../../api";
 import { HOME_VIDEOS_REQUEST,HOME_VIDEOS_SUCCESS,HOME_VIDEOS_FAILURE,SEARCH_VIDEOS_REQUEST,SEARCH_VIDEOS_SUCCESS,SEARCH_VIDEOS_FAILURE} from "../action_types";
+import {baseParams} from '../../api';
+
 export const get_popular_videos = ()=>{
     return async (dispatch,getState)=>{
         try{
             dispatch({type:HOME_VIDEOS_REQUEST});
             const {data} = await request("/videos",{
               params:{
+                  ...baseParams,
                   part:"snippet,contentDetails,statistics",
                   chart:"mostPopular",
                   regionCode:"IN",
@@ -38,6 +41,7 @@ export const get_categories_videos = (keyword)=>{
             dispatch({type:HOME_VIDEOS_REQUEST});
             const {data} = await request("/search",{
               params:{
+                  ...baseParams,
                   part:"snippet",
                   maxResults:12,
                   q:keyword,
@@ -72,6 +76,7 @@ export const get_search_videos = (keyword)=>{
             dispatch({type:SEARCH_VIDEOS_REQUEST});
             const {data} = await request("/search",{
               params:{
+                  ...baseParams,
                   part:"snippet",
                   maxResults:20,
                   q:keyword,
