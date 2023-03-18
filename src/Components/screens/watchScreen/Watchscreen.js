@@ -50,7 +50,7 @@ function Watchscreen() {
         <HelmetCustom title ={title} description = {description}/>
         <Col lg={8}>
          <div className="iframe_container" style = {{backgroundColor:"grey"}}>
-         <iframe title = "video" src={`http://www.youtube.com/embed/${id}?autoplay=1`} type="video/youtube" width="100%" height="100%" frameBorder="0" allowFullScreen allow="autoplay"></iframe>
+         <iframe title = "video" src={`https://www.youtube.com/embed/${id}?autoplay=1`} type="video/youtube" width="100%" height="100%"  allowFullScreen allow="autoplay"></iframe>
          </div>
         <div className ="video_title my-3 text-light" >
          {title}
