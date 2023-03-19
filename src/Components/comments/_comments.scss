@@ -21,6 +21,24 @@
     padding: 0.2rem;
     background-color:rgb(74, 74, 250);
     cursor:pointer;
-    
  }
+}
+
+.show_comments{
+    border: 2px solid white;
+    display:none;
+    @media(max-width:600px){
+        display:block;
+    }
+}
+.comments_list{
+    @media(max-width:601px){
+        display:none;
+    }
+    
+}
+.hide{
+    @media(max-width:601px){
+        display:block;
+    }
 }

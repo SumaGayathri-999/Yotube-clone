@@ -1,11 +1,11 @@
 import React from 'react';
-import {useState,useEffect} from 'react';
+import {useState,useEffect,useRef} from 'react';
 import {useDispatch,useSelector} from 'react-redux';
 import './_comments.scss';
 import Comment from './Comment';
 import numeral from 'numeral';
 import {getComments,addComments} from '../../Redux/actions/comment_action';
-
+import ShowComments from './ShowComments';
 
 function Comments({commentCount,videoId}) {
   const [text,setText]=useState("");
@@ -37,11 +37,7 @@ function Comments({commentCount,videoId}) {
               <button className ="rounded">Comment</button>
            </form>
        </div>
-       <div>
-           {allComments?.map((comment,index)=>{
-            return <Comment key = {index} comment={comment}/>
-           })}
-       </div>
+       <ShowComments allComments = {allComments}/>       
     </>
   )
 }

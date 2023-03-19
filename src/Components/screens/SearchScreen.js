@@ -16,7 +16,7 @@ function SearchScreen() {
     },[query])
   return (
     <>
-    <div className ="left_elements">
+    <div className ="left_elements mt-3 search_cont">
     <HelmetCustom title ={query}/>
 
       {!loading ? (videos).map((video)=>{return <VideoWatch video = {video} key ={video.id.videoId} searchScreen/>}) : 
