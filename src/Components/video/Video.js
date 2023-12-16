@@ -57,7 +57,7 @@ function Video({video}) {
 
     <div className="video" onClick = {()=>{navigate(`/watch/${video_id}`,{state:{videoInfo:videoInfo,channelInfo:channelInfo}})}} style={{width:"100%"}}>
       <div   className="video__thumb" style = {{height:"200px"}}>
-        <LazyLoadImage  src={medium.url} alt="" width ="100%" height ="100%" loading = "lazy" style ={{backgroundColor:"grey",width:"100%"}}></LazyLoadImage >
+        <LazyLoadImage  src={medium.url} alt="" width ="100%" height ="100%" loading = "lazy" style ={{backgroundColor:"grey",width:"100%",borderRadius:"20px",border:"2px solid"}}></LazyLoadImage >
         <span>{dur}</span>
       </div>
       <div className="video__title">
