@@ -48,7 +48,7 @@ function App() {
             <Route path="/home" element={<Layout><HomeScreen /></Layout>}></Route>
             <Route path='/watch/:id' element={<Layout><Watchscreen /></Layout>}></Route>
             <Route path='/search/:query' element={<Layout><SearchScreen /></Layout>}></Route>
-            <Route path="*" element={<h1>Invalid Route</h1>} ></Route>
+            <Route path="*" element={<h1 style={{display:"flex",justifyContent:"center",alignContent:"center",marginTop:"50vh"}}>404 Not Found 😞</h1>} ></Route>
          </Routes>
     </>
   )
