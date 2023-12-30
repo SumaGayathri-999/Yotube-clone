@@ -34,7 +34,8 @@ jobs:
         with:
           args: deploy --only hosting
         env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_YOUTB_CLONE }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
 
 
           
