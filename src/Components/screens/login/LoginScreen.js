@@ -21,6 +21,7 @@ function LoginScreen() {
         <div className="login__container">
             <img src="https://pngimg.com/uploads/youtube/youtube_PNG2.png" alt="" />
             <div className="gradient">
+    
                <button onClick = {handleLogin}><p className="gradient-text">Login with Google</p></button>
             </div>
         </div>
