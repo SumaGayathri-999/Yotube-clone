@@ -6,7 +6,7 @@ import { HiOutlineSave} from 'react-icons/hi';
 import {AiFillEye } from 'react-icons/ai';
 import "./_watchScreen.scss"
 import Comments from '../../comments/Comments';
-import VideoWatch from '../../videoWatch/VideoWatch';
+// import VideoWatch from '../../videoWatch/VideoWatch';
 import ShowMore from './ShowMore';
 import {useParams,useLocation} from 'react-router-dom';
 import numeral from 'numeral';
@@ -48,7 +48,7 @@ function Watchscreen() {
     <>
     <Row className ="watchscreen force_left mt-3" style = {{padding:"0px"}} >
         <HelmetCustom title ={title} description = {description}/>
-        <Col lg={8}>
+        <Col lg={12}>
          <div className="iframe_container" style = {{backgroundColor:"grey"}}>
          <iframe title = "video" src={`https://www.youtube.com/embed/${id}?autoplay=1`} frameborder="0" width="100%" height="100%"  allow ="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture"></iframe>
          </div>
@@ -89,12 +89,12 @@ function Watchscreen() {
         <Comments commentCount = {commentCount} videoId = {id}/>
         </Col>
   
-        <Col lg={4}>
+        {/* <Col lg={4}>
         {relatedvid?.map((video)=><VideoWatch video = {video}/>)}
         {loading && [...Array(12)].map((item)=>{
           return <div className ="loading_skeleton" ></div>
         })}
-        </Col>
+        </Col> */}
     </Row>
     </>
   )
